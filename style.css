@@ -4,13 +4,15 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s ease;
+    transition: background 0.8s ease;
+    overflow: hidden;
+    margin: 0;
 }
 
 img {
     display: flex;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 #title {
     display: flex;
@@ -19,14 +21,15 @@ img {
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    z-index: 0;
+    z-index: 1;
     font: bold 130pt "Times New Roman";
     font-size: clamp(120px, 5vw, 280px);
     position: relative;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: white;
     cursor: default;
-    animation: colorTitle 7.1s infinite;
+    animation: colorTitle 7.2s infinite;
+    transition: opacity 0.3s;
 }
 
 #title-sabor {
@@ -37,6 +40,12 @@ img {
     max-width: 55%;
     height: auto;
     display: block;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+#latinha:hover {
+    animation: marginImg 1.7s infinite;
 }
 
 
@@ -47,6 +56,7 @@ img {
     z-index: -1;
     transition: 0.2s ease;
     animation: widthImg 7s infinite;
+    transition: all 0.5s ease-in-out;
 }
 
 
@@ -62,7 +72,7 @@ img {
     bottom: 5%;
 }
 
-button {
+#button-right, #button-left {
     transition: 0.2s ease;
     border-radius: 100%;
     height: 50px;
@@ -71,12 +81,52 @@ button {
     border: none;
 }
 
-button:hover {
+#button-right:hover, #button-left:hover {
     opacity: 1;
     height: 54px;
     width: 54px;
 }
 
+#button-case {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45px;
+    height: 5%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.page {
+    margin-top: 15%;
+    height: 8px;
+    width: -webkit-fill-available;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    background-color: white;
+}
+
+
+#main-menu {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    z-index: 3;
+    width: 0;
+    background-color: white;
+    box-shadow: 10px 0 20px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: width 3s ease;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
 @keyframes colorTitle {
     0% {color: white;}
@@ -88,6 +138,12 @@ button:hover {
     0% {max-width: 100%;}
     50% {max-width: 10%;}
     100% {max-width: 100%;}
+}
+
+@keyframes marginImg {
+    0% {margin-bottom: 20px;}
+    50% {margin-bottom: 0px;}
+    100% {margin-bottom: 20px;}
 }
 
 @media (min-width: 768px) {
