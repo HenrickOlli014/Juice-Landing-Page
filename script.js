@@ -86,7 +86,7 @@ function activeMenu() {
     const background_image = document.getElementsByClassName('background-text')
 
     if (menu.style.width === '0px' || menu.style.width === '') {
-        menu.style.width = '102%';
+        menu.style.width = '100%';
         setTimeout(() => {
 
             for (let i = 0; i < box_text.length; i++) {
@@ -126,5 +126,13 @@ function activeMenu() {
         miniScrap_three_reverse.style.transform = 'rotate(0deg)';
 
     }
+}
+
+function redirectForm() {
+    const unit = document.getElementById('unit');
+    const double = document.getElementById('double');
+    const triple = document.getElementById('triple');
+
+    
 }
 
