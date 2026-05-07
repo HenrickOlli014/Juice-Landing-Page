@@ -168,13 +168,21 @@ img {
 }
 
 
-#soft-double, #soft-triple-three {
+#soft-double {
     right: 52%;
 }
 
-#soft-double-two, #soft-triple-two {
+#soft-double-two {
     left: 52%;
 }
+
+#soft-triple-three {
+    left: 16%;
+}
+#soft-triple-two {
+    right: 16%;
+}
+
 
 .text-menu {
     position: absolute;
@@ -197,14 +205,14 @@ img {
     text-align: center;
     bottom: 0;
     font-family: 'Times New Roman', Times, serif;
-    font-size: clamp(12px, 5vw, 22px);
+    font-size: clamp(12px, 5vw, 32px);
     position: absolute;
     gap: 20px;
     height: 90%;
     width: 100%;
 }
 
-#point-one {
+.point-one {
     width: 100%;
 }
 
@@ -268,13 +276,18 @@ img {
         border-radius: 15px;
     }   
 
-    #soft-unit, #soft-triple {   
-        left: 41%;
+    #soft-unit {   
+        right: 42%;
         top: 0;
     }
 
-    #soft-double, #soft-double-two, #soft-triple-two, #soft-triple-three {
+
+    #soft-double, #soft-double-two, #soft-triple-two, #soft-triple-three, #soft-triple {
         top: 0;
+    }
+
+    #soft-unit, #soft-double, #soft-double-two, #soft-triple-three, #soft-triple-two, #soft-triple {
+        height: 140px;
     }
 
     .miniScrap {

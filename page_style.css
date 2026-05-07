@@ -1,0 +1,44 @@
+#body_one {
+    margin: 0;
+    background-color: antiquewhite;
+    height: 200vh;
+}
+
+header {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    background-color: white;
+    height: 80px;
+}
+
+#logo {
+    left: 0;
+    height: 100%;
+}
+
+form {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    margin-left: 20px;
+}
+
+.button-header {
+    background-color: transparent;
+    font: bold 18pt "Times New Roman";
+    height: 55%;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.button-header:hover {
+    margin-bottom: 2px;
+    color: rgb(104, 2, 104);
+}
