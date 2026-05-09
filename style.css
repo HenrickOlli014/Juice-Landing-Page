@@ -263,6 +263,10 @@ img {
         gap: 25px;
     }
 
+    #title-sabor {
+    font-size: 18cqw;
+}
+
     .menu-option {
         width: 55%;
         height: 550px;
@@ -277,7 +281,6 @@ img {
     }   
 
     #soft-unit {   
-        right: 42%;
         top: 0;
     }
 
