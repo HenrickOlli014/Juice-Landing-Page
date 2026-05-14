@@ -6,7 +6,6 @@ const textSabor = document.getElementById('title-sabor');
 const scrap = document.getElementById('latinha');
 const fruit = document.getElementById('fruit');
 const button_menu = document.getElementById('button-case');
-const menu = document.getElementById('main-menu');
 
 
 function buttonRight() {
@@ -72,67 +71,5 @@ function buttonLeft() {
         scrap.style.opacity = '1';
         fruit.style.opacity = '1';
     }, 400);
-}
-
-
-function activeMenu() {
-    const miniScrap_one = document.getElementById('soft-unit');
-    const miniScrap_two = document.getElementById('soft-double');
-    const miniScrap_two_reverse = document.getElementById('soft-double-two');
-    const miniScrap_three_center = document.getElementById('soft-triple');
-    const miniScrap_three = document.getElementById('soft-triple-two');
-    const miniScrap_three_reverse = document.getElementById('soft-triple-three');
-    const box_text = document.getElementsByClassName('menu-option');
-    const background_image = document.getElementsByClassName('background-text')
-
-    if (menu.style.width === '0px' || menu.style.width === '') {
-        menu.style.width = '100%';
-        setTimeout(() => {
-
-            for (let i = 0; i < box_text.length; i++) {
-                box_text[i].style.opacity = '1';
-            }
-
-            for (let i = 0; i < background_image.length; i++) {
-                background_image[i].style.opacity = '1'
-            }
-
-            miniScrap_one.style.transform = 'rotate(-15deg)';
-
-            miniScrap_two.style.transform = 'rotate(-20deg)';
-            miniScrap_two_reverse.style.transform = 'rotate(20deg)';
-
-            miniScrap_three.style.transform = 'rotate(30deg)';
-            miniScrap_three_reverse.style.transform = 'rotate(-30deg)';
-
-        }, 500);
-    }else {
-        menu.style.width = '0px';
-
-        for (let i = 0; i < box_text.length; i++) {
-                box_text[i].style.opacity = '0';
-        }
-
-        for (let i = 0; i < background_image.length; i++) {
-            background_image[i].style.opacity = '0';
-        }
-
-        miniScrap_one.style.transform = 'rotate(0deg)';
-
-        miniScrap_two.style.transform = 'rotate(0deg)';
-        miniScrap_two_reverse.style.transform = 'rotate(0deg)';
-
-        miniScrap_three.style.transform = 'rotate(0deg)';
-        miniScrap_three_reverse.style.transform = 'rotate(0deg)';
-
-    }
-}
-
-function redirectForm() {
-    const unit = document.getElementById('unit');
-    const double = document.getElementById('double');
-    const triple = document.getElementById('triple');
-
-    
 }
 

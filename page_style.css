@@ -1,19 +1,27 @@
+
 /*Saude e Nutricao*/
 
 #body_one {
     margin: 0;
     background-color: antiquewhite;
-    height: 200vh;
+    min-height: 100vh;
 }
 
 #info-header {
-    position: sticky;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 0;
     background-color: rgb(255, 255, 255);
     height: 80px;
+    width: 100%;
+    z-index: 1000;
+}
+
+#list-options {
+    display: flex;
+    gap: 40px;
 }
 
 #logo {
@@ -22,70 +30,59 @@
 }
 
 form {
-    height: 80px;
+    height: 100%;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 55px;
-    margin-left: 20px;
 }
 
-.button-header {
+#optionsCenter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+
+.button-head, .button-header {
     background-color: transparent;
-    font: bold 18pt "Times New Roman";
+    font: bold clamp(14px, 5vw, 20px) "Times New Roman";
     height: 55%;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease;
     border: none;
     cursor: pointer;
 }
 
-.button-header:hover {
+.button-head:hover, .button-header:hover {
     margin-bottom: 2px;
     filter: contrast(70%);
+    color: purple;
+    text-decoration: underline;
+}
+
+#home, #little-car {
+    max-height: 50px;
+}
+
+#produtos {
+    height: 100vh;
+    background-color: black;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 5%;
+
+}
+
+.casedoProduto {
+    height: 380px;
+    width: 28%;
+    background: white;
 }
 
 /* Menu */
-
-#body-two {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh; /* fit content */
-    background-color: bisque;
-    overflow-x: hidden;
-}
-
-#menu-header {
-    background-color: white;
-    height: 90px;
-    width: 100%;
-    position: sticky;
-    top: 0;
-}
-
-#home {
-    height: 50px;
-}
-
-#little-car {
-    height: 55px;
-}
-
-#case-master {
-    display: flex;
-    position: relative;
-    height: 40vh;
-    justify-content: center;
-    align-items: center;
-    container-type: inline-size;
-    gap: 15px;
-}
-
-.product {
-    width: 40%;
-    background-color: white;
-    height: 60%;
-    border-radius: 0 20px;
-}
